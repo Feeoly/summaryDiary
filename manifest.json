@@ -1,0 +1,46 @@
+{
+	"manifest_version": 2,
+	"name": "zyc",
+	"version": "1.0.0",
+	"description": "zyc-summmary",
+	"icons":
+	{
+		"16": "static/img/icon.png",
+		"48": "static/img/icon.png",
+		"128": "static/img/icon.png"
+	},
+	"background":
+	{
+        "page": "template/background.html"
+    },
+	"browser_action": 
+	{
+		"default_icon": "static/img/icon.png",
+		"default_title": "Let's do summary diary",
+		"default_popup": "template/popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["static/js/jquery-3.1.0.min.js", "static/js/content-script.js"],
+			"css": ["static/css/custom.css"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"web_accessible_resources": ["js/inject.js"],
+	"homepage_url": "https://www.baidu.com",
+	"omnibox": { "keyword" : "summary" },
+	"devtools_page": "devtools.html"
+}

@@ -1,0 +1,83 @@
+<!-- refs: https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html#event-pages -->
+<!-- refs: https://juejin.im/post/5e745f35e51d4526c80ec11c#heading-15 -->
+<html class="zyc-html">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body class="zyc-wrapper">
+        <div class="zyc-desc">Copy the content that you want to keep, then add it to the summary diary</div>
+        <div class="zyc-btn show-btn">Toggle summary</div>
+        <div class="zyc-btngroup">
+            <div class="zyc-btn start-btn">Start</div>
+            <div class="zyc-btn stop-btn">Stop</div>
+        </div>
+    </body>
+    <!--you cannot add inline js or directly insert script js in here, it will report an error -->
+    <!--e.g. <button inclick="xxx"></button>  or  <script>$('.btn').click(()=>{}) </script>-->
+    <script type="text/javascript" src="../static/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/popup.js"></script>
+    <style>
+        .zyc-html{
+            width: 300px;
+            height: 160px;
+        }
+        .zyc-wrapper{
+            width: 300px;
+            height: 130px;
+            display: inline-block;
+            padding: 10px;
+            margin: 0px;
+            box-sizing: border-box;
+            user-select: none;
+        }
+        .zyc-desc{
+            font-size: 14px;
+            padding: 10px 0;
+            display: inline-block;
+        }
+        .zyc-btngroup{
+            float: right;
+        }
+        .zyc-btn{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            text-align: center;
+            cursor: pointer;
+        }
+        .start-btn{
+            color: #ffffff;
+            background: rgb(255, 119, 58);
+            border: 1px solid #ffffff;
+        }
+        .start-btn:hover{
+            background: rgb(247, 94, 24);
+        }
+        .stop-btn{
+            color: rgb(255, 119, 58);
+            background: #ffffff;
+            border: 1px solid rgb(255, 119, 58);
+        }
+        .stop-btn:hover{
+            background: #f3d8cf;
+        }
+        .show-btn{
+            margin: 10px;
+            width: 260px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            box-sizing: border-box;
+            color: #ffffff;
+            background: rgb(255, 119, 58);
+            border: 1px solid #ffffff;
+        }
+        .show-btn:hover{
+            background: rgb(247, 94, 24);
+        }
+    </style>
+</html>
